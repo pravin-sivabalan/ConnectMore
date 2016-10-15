@@ -2,7 +2,7 @@
 public class Board {
 
 	public char[][] board;
-	private boolean column = true;
+
 	
 	public Board(){
 		board = new char[7][7];
@@ -21,13 +21,7 @@ public class Board {
 		
 		for(int i=0; i<board.length; i++){
 			for(int j=0; j<board[i].length; j++){
-				if(column){
-					c[i][(int)Math.abs(j-6)] = board[i][j];
-				}
-				else{
-					c[(int)Math.abs(i-6)][j] = board[i][j];
-				}
-					
+					c[j][(int)Math.abs(i-6)] = board[i][j];
 			}
 		}
 		
@@ -37,7 +31,6 @@ public class Board {
 			}
 		}
 		
-		column = !column;
 	}
 	
 	public int putPiece(int column, char color){
@@ -186,7 +179,7 @@ public class Board {
 		
 		b.rotateBoard();
 		
-		System.out.println("" + b.board[2][4] + "\n" +  b.board[3][2] + "\n" + b.board[1][4] );
+		b.printScreen();
 		
 	}
 	
