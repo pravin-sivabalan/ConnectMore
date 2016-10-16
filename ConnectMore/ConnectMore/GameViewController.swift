@@ -138,9 +138,28 @@ class GameViewController: UIViewController {
     }
     
     func rotateBoard(){
-        UIView.animate(withDuration: 0.25, animations:{
-            self.backgroundBoard.transform = CGAffineTransform(rotationAngle: (180.0 * CGFloat(M_PI))/180)
-        })
+        let duration = 0.75
+        let delay = 0.0
+        let options = UIViewKeyframeAnimationOptions.calculationModePaced
+        let fullRotation = CGFloat(M_PI * 2)
+
+    
+        UIView.animateKeyframes(withDuration: duration, delay: delay, options: options, animations: {
+            
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0, animations: {
+                self.backgroundBoard.transform = CGAffineTransform(rotationAngle: 1/3 * fullRotation)
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0, animations: {
+                self.backgroundBoard.transform = CGAffineTransform(rotationAngle: 2/3 * fullRotation)
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0, animations: {
+                self.backgroundBoard.transform = CGAffineTransform(rotationAngle: 3/3 * fullRotation)
+            })
+            
+            }, completion: nil)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -161,6 +180,7 @@ class GameViewController: UIViewController {
         if(x != " "){
             Status.text = "\(x) is the WINNER!!"
         }
+        rotateBoard()
         updateBoard()
     }
     
@@ -169,6 +189,7 @@ class GameViewController: UIViewController {
         if(x != " "){
             Status.text = "\(x) is the WINNER!!"
         }
+        rotateBoard()
         updateBoard()
     }
     
@@ -177,6 +198,7 @@ class GameViewController: UIViewController {
         if(x != " "){
             Status.text = "\(x) is the WINNER!!"
         }
+        rotateBoard()
         updateBoard()
     }
     
@@ -185,6 +207,7 @@ class GameViewController: UIViewController {
         if(x != " "){
             Status.text = "\(x) is the WINNER!!"
         }
+        rotateBoard()
         updateBoard()
     }
     
@@ -193,6 +216,7 @@ class GameViewController: UIViewController {
         if(x != " "){
             Status.text = "\(x) is the WINNER!!"
         }
+        rotateBoard()
         updateBoard()
     }
     
@@ -201,6 +225,7 @@ class GameViewController: UIViewController {
         if(x != " "){
             Status.text = "\(x) is the WINNER!!"
         }
+        rotateBoard()
         updateBoard()
     }
     
