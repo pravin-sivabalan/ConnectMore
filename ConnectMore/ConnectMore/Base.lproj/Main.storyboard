@@ -454,18 +454,15 @@
                                     <outletCollection property="gestureRecognizers" destination="K9T-FG-yRe" appends="YES" id="yHo-7s-CXh"/>
                                 </connections>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8Z-E4-OE3">
-                                <frame key="frameInset" minX="138" minY="576" width="96" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5c4-bo-2fy">
+                                <frame key="frameInset" minX="19" minY="533" width="34" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="1"/>
                                 <connections>
-                                    <action selector="moveX:" destination="v0f-GM-Mz6" eventType="touchUpInside" id="cA7-At-f5o"/>
+                                    <action selector="chooseCol1:" destination="v0f-GM-Mz6" eventType="touchUpInside" id="RRE-bh-IaZ"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="E8R-xb-fd8">
-                                <frame key="frameInset" minY="129" width="375" height="439"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -532,7 +529,4 @@
             <point key="canvasLocation" x="792.79999999999995" y="43.628185907046479"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="background.png" width="511" height="512"/>
-    </resources>
 </document>

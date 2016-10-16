@@ -77,8 +77,11 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        obj00.text = "A"//a.board[0][0]
+        updateBoard()
+    }
+    
+    func updateBoard(){
+        obj00.text = a.board[0][0]
         obj01.text = a.board[0][1]
         obj02.text = a.board[0][2]
         obj03.text = a.board[0][3]
@@ -127,32 +130,21 @@ class GameViewController: UIViewController {
         obj64.text = a.board[6][4]
         obj65.text = a.board[6][5]
         obj66.text = a.board[6][6]
-        
-//        self.container.frame = CGRect(x: 60, y: 60, width: 200, height: 200)
-//        self.view.addSubview(container)
-//        self.redSquare.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
-//        self.redSquare.backgroundColor = UIColor.red
-//        self.container.addSubview(self.redSquare)
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    func moveX(_ sender: AnyObject) {
-//        xImage.frame.origin.y = xImage.frame.origin.y + 10
-//        currentPlayer.text = "It's Player 2's Turn"
-////        obj00.font = UIFont(name: obj00.font.fontName, size: 35)
-        
-        
+    @IBAction func chooseCol1(_ sender: AnyObject) {
+        a.play(column:0)
+        updateBoard()
     }
+    
+    
+    
    
-    @IBAction func moveCol1(_ sender: AnyObject) {
-        currentPlayer.text = "Hello"
-    }
+    
     
 
 }
