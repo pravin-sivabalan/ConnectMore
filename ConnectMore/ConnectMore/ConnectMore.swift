@@ -178,6 +178,23 @@ class ConnectMore {
         
         
         let row = putPiece(column: column, color: PLAYER[player])
+		if row == -1{
+		let alert = UIAlertController(title: "Error", message: "That was an invalid move", preferredStyle: UIAlertControllerStyle.Alert)
+		alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+		self.presentViewController(alert, animated: true, completion: nil)
+		alert.show()
+		/**
+		// Delay the dismissal by 5 seconds
+		let delay = 2.0 * Double(NSEC_PER_SEC)
+		var time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+		dispatch_after(time, dispatch_get_main_queue(), {
+        alert.dismissWithClickedButtonIndex(-1, animated: true)
+		*/
+    })
+
+}
+		}
+		
         if checkAlignment(row: row, column: column) == PLAYER[player]{
             return PLAYER[player]
         }
