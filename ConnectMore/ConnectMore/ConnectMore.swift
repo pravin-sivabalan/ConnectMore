@@ -182,7 +182,7 @@ class ConnectMore {
             return true
         }
         if player == 2{
-            player == 0
+            player = 0
         }
         else{
             player += 1

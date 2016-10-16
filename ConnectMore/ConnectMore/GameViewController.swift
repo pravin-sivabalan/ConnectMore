@@ -135,16 +135,40 @@ class GameViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    @IBAction func chooseCol1(_ sender: AnyObject) {
-        a.play(column:0)
+   
+    @IBAction func putCol1(_ sender: AnyObject) {
+        a.play(column: 0)
         updateBoard()
     }
     
+    @IBAction func putCol2(_ sender: AnyObject) {
+        a.play(column:1)
+        updateBoard()
+    }
     
+    @IBAction func putCol3(_ sender: AnyObject) {
+        a.play(column:2)
+        updateBoard()
+    }
     
-   
+    @IBAction func putCol4(_ sender: AnyObject) {
+        a.play(column:3)
+        updateBoard()
+    }
     
+    @IBAction func putCol5(_ sender: AnyObject) {
+        a.play(column:4)
+        updateBoard()
+    }
     
-
-}
+    @IBAction func putCol6(_ sender: AnyObject) {
+        a.play(column:5)
+        updateBoard()
+    }
+    
+    @IBAction func putCol7(_ sender: AnyObject) {
+        a.play(column: 6)
+        updateBoard()
+    }
+    
+  }
