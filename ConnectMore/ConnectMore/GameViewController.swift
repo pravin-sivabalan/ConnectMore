@@ -141,21 +141,21 @@ class GameViewController: UIViewController {
         let duration = 0.75
         let delay = 0.0
         let options = UIViewKeyframeAnimationOptions.calculationModePaced
-        let fullRotation = CGFloat(M_PI * 0.5)
+        let fullRotation = CGFloat(M_PI * 2)
 
     
         UIView.animateKeyframes(withDuration: duration, delay: delay, options: options, animations: {
             
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0, animations: {
+                self.backgroundBoard.transform = CGAffineTransform(rotationAngle: 1/3 * fullRotation)
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0, animations: {
+                self.backgroundBoard.transform = CGAffineTransform(rotationAngle: 2/3 * fullRotation)
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0, animations: {
                 self.backgroundBoard.transform = CGAffineTransform(rotationAngle: 3/3 * fullRotation)
-            })
-            
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0, animations: {
-                self.backgroundBoard.transform = CGAffineTransform(rotationAngle: 4/4 * fullRotation)
-            })
-            
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0, animations: {
-                self.backgroundBoard.transform = CGAffineTransform(rotationAngle: 5/5 * fullRotation)
             })
             
             }, completion: nil)
