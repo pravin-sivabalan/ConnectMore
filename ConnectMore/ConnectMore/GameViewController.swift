@@ -10,8 +10,9 @@ import UIKit
 
 class GameViewController: UIViewController {
 
-    @IBOutlet weak var xImage: UIImageView!
+
     @IBOutlet weak var Status: UILabel!
+    @IBOutlet weak var backgroundBoard: UIImageView!
     
     
     var a = ConnectMore()
@@ -82,6 +83,7 @@ class GameViewController: UIViewController {
     }
     
     func updateBoard(){
+        
         Status.text = "It's Player \(a.player+1)'s Turn"
         
         obj00.text = a.board[0][0]
@@ -134,6 +136,12 @@ class GameViewController: UIViewController {
         obj65.text = a.board[6][5]
         obj66.text = a.board[6][6]
     }
+    
+    func rotateBoard(){
+        UIView.animate(withDuration: 0.25, animations:{
+            self.backgroundBoard.transform = CGAffineTransform(rotationAngle: (180.0 * CGFloat(M_PI))/180)
+        })
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -144,6 +152,7 @@ class GameViewController: UIViewController {
         if(x != " "){
             Status.text = "\(x) is the WINNER!!"
         }
+        rotateBoard()
         updateBoard()
     }
     
