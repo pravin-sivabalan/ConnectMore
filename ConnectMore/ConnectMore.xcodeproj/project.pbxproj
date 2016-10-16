@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C2AE00A1DB32D4200DDD578 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C2AE0091DB32D4200DDD578 /* background.png */; };
 		1C4C27EE1DB2CE6C00E3A763 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C27ED1DB2CE6C00E3A763 /* AppDelegate.swift */; };
 		1C4C27F01DB2CE6C00E3A763 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C27EF1DB2CE6C00E3A763 /* ViewController.swift */; };
 		1C4C27F31DB2CE6C00E3A763 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C4C27F11DB2CE6C00E3A763 /* Main.storyboard */; };
@@ -31,7 +30,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1C2AE0091DB32D4200DDD578 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		1C4C27EA1DB2CE6C00E3A763 /* ConnectMore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectMore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C4C27ED1DB2CE6C00E3A763 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C4C27EF1DB2CE6C00E3A763 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 				1C4C28131DB2E8B900E3A763 /* GameViewController.swift */,
 				1C4C27F11DB2CE6C00E3A763 /* Main.storyboard */,
 				1CE748901DB33DE3005F6D4C /* background2.png */,
-				1C2AE0091DB32D4200DDD578 /* background.png */,
 				1C4C27F41DB2CE6C00E3A763 /* Assets.xcassets */,
 				1CA943911DB2E9D00008E220 /* x.jpg */,
 				1C4C27F61DB2CE6C00E3A763 /* LaunchScreen.storyboard */,
@@ -197,7 +194,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CA943921DB2E9D10008E220 /* x.jpg in Resources */,
-				1C2AE00A1DB32D4200DDD578 /* background.png in Resources */,
 				1C4C27F81DB2CE6C00E3A763 /* LaunchScreen.storyboard in Resources */,
 				1C4C27F51DB2CE6C00E3A763 /* Assets.xcassets in Resources */,
 				1CE748911DB33DE3005F6D4C /* background2.png in Resources */,

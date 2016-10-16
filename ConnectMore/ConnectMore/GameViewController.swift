@@ -82,6 +82,8 @@ class GameViewController: UIViewController {
     }
     
     func updateBoard(){
+        Status.text = "It's Player \(a.player+1)'s Turn"
+        
         obj00.text = a.board[0][0]
         obj01.text = a.board[0][1]
         obj02.text = a.board[0][2]
