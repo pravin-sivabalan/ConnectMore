@@ -173,13 +173,13 @@ class ConnectMore {
         }
         print("---------------------------------------------------------")
     }
-    func play(column:Int) ->Bool
+    func play(column:Int) -> String
     {
         
         
         let row = putPiece(column: column, color: PLAYER[player])
         if checkAlignment(row: row, column: column) == PLAYER[player]{
-            return true
+            return PLAYER[player]
         }
         if player == 2{
             player = 0
@@ -188,7 +188,7 @@ class ConnectMore {
             player += 1
         }
         rotateBoard()
-        return false
+        return " "
     }
     
 }

@@ -11,6 +11,7 @@ import UIKit
 class GameViewController: UIViewController {
 
     @IBOutlet weak var xImage: UIImageView!
+    @IBOutlet weak var Status: UILabel!
     
     
     var a = ConnectMore()
@@ -137,37 +138,58 @@ class GameViewController: UIViewController {
     }
    
     @IBAction func putCol1(_ sender: AnyObject) {
-        a.play(column: 0)
+        let x = a.play(column:0)
+        if(x != " "){
+            Status.text = "\(x) is the WINNER!!"
+        }
         updateBoard()
     }
     
     @IBAction func putCol2(_ sender: AnyObject) {
-        a.play(column:1)
+        let x = a.play(column:1)
+        if(x != " "){
+            Status.text = "\(x) is the WINNER!!"
+        }
         updateBoard()
     }
     
     @IBAction func putCol3(_ sender: AnyObject) {
-        a.play(column:2)
+        let x = a.play(column:2)
+        if(x != " "){
+            Status.text = "\(x) is the WINNER!!"
+        }
         updateBoard()
     }
     
     @IBAction func putCol4(_ sender: AnyObject) {
-        a.play(column:3)
+        let x = a.play(column:3)
+        if(x != " "){
+            Status.text = "\(x) is the WINNER!!"
+        }
         updateBoard()
     }
     
     @IBAction func putCol5(_ sender: AnyObject) {
-        a.play(column:4)
+        let x = a.play(column:4)
+        if(x != " "){
+            Status.text = "\(x) is the WINNER!!"
+        }
         updateBoard()
     }
     
     @IBAction func putCol6(_ sender: AnyObject) {
-        a.play(column:5)
+        let x = a.play(column:5)
+        if(x != " "){
+            Status.text = "\(x) is the WINNER!!"
+        }
         updateBoard()
     }
     
     @IBAction func putCol7(_ sender: AnyObject) {
-        a.play(column: 6)
+        let x = a.play(column: 6)
+        if(x != " "){
+            Status.text = "\(x) is the WINNER!!"
+        }
         updateBoard()
     }
     

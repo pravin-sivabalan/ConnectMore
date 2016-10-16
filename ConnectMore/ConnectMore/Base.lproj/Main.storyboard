@@ -521,6 +521,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="Status" destination="0gM-aJ-2hu" id="Qb6-9C-zej"/>
                         <outlet property="currentPlayer" destination="0gM-aJ-2hu" id="mPq-hY-0L9"/>
                         <outlet property="obj00" destination="ApE-bC-c9q" id="9N8-iC-MCJ"/>
                         <outlet property="obj01" destination="kRt-2Q-miT" id="HWO-H1-zNt"/>
