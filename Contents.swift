@@ -4,6 +4,10 @@ class ConnectMore {
     
     var board = Array(repeating: Array(repeating: " ", count: 7), count: 7)
     
+    let PLAYER: [String] = ["X","Y","Z"]
+    
+    var player = 0
+    
     init() {
         
     }
@@ -171,11 +175,19 @@ class ConnectMore {
         }
         print("---------------------------------------------------------")
     }
-    func play(column:Int, color:String) ->Bool
+    func play(column:Int) ->Bool
     {
-        let row = putPiece(column: column, color: color)
-        if checkAlignment(row: row, column: column) == color{
+        
+        
+        let row = putPiece(column: column, color: PLAYER[player])
+        if checkAlignment(row: row, column: column) == PLAYER[player]{
             return true
+        }
+        if player == 2{
+            player == 0
+        }
+        else{
+            player += 1
         }
         rotateBoard()
         return false
@@ -183,19 +195,3 @@ class ConnectMore {
  
 }
 
-var a = ConnectMore()
-a.play(column: 0, color: "A")
-a.play(column: 6, color: "A")
-a.play(column: 0, color: "A")
-a.play(column: 0, color: "A")
-a.play(column: 0, color: "A")
-a.play(column: 0, color: "A")
-a.play(column: 0, color: "A")
-a.play(column: 0, color: "A")
-a.play(column: 0, color: "A")
-a.play(column: 0, color: "A")
-a.play(column: 0, color: "A")
-a.play(column: 0, color: "A")
-a.play(column: 4, color: "A")
-a.play(column: 3, color: "A")
-a.printScreen()
